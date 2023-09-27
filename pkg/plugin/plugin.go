@@ -17,6 +17,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"os"
 	"strings"
 	"sync"
 	"time"
@@ -169,6 +170,9 @@ func newPlugin(
 	checkPeriod time.Duration,
 	errcBuf int,
 ) *Plugin {
+	if key == "" {
+		key = os.Getenv("KMS_KEY_ARN")
+	}
 	p := &Plugin{
 		svc:                       svc,
 		keyID:                     key,
