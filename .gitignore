@@ -2,3 +2,5 @@ bin
 *.sock
 .DS_Store
 *.swp
+.idea/
+.vscode/
