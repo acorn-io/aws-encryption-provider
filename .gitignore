@@ -4,3 +4,5 @@ bin
 *.swp
 .idea/
 .vscode/
+
+depot.json
